@@ -3,15 +3,22 @@ Kevin Sakaguti Porto - 11039416
 
 Seja bem vindo ao programa projeto1 -> "Lousa Mágica".
 
-O programa é desenvolvido em C++,se trata de uma "Lousa Mágica" que permite aos usuários criar desenhos e padrões sem que o "lápis saia do papel". Ele oferece a capacidade de criar padrões geométricos usando círculos e retas. Em essência, é uma aplicação de desenho digital que possibilita a criação de arte e geometria de forma interativa e virtual. Os usuários podem desenhar livremente ou criar padrões precisos com circulos, proporcionando uma plataforma versátil para expressão criativa e exploração matemática.
+O programa é desenvolvido em C++,se trata de uma "Lousa Mágica" que permite aos usuários criar 
+desenhos e padrões sem que o "lápis saia do papel". Ele oferece a capacidade de criar padrões 
+geométricos usando círculos e retas. Em essência, é uma aplicação de desenho digital que possibilita 
+a criação de arte e geometria de forma interativa e virtual. Os usuários podem desenhar livremente 
+ou criar padrões precisos com circulos, proporcionando uma plataforma versátil para expressão 
+criativa e exploração matemática.
 
 
 O projeto foi inspirado no "sierpinski", onde ele cria um fractal de triangulos com pontos "aleatorios".
 
 O Projeto:
 
-Diferente do sierpinski, ao invés de utilizar pontos calculados para a formação de um padrão geometrico. No onPaintUI(), adicionei dois "Sliders" um na horizontal e um na vertical (SliderFloat e VSliderFloat, respectivamente).
-Ambos os sliders são ajustados ao tamanho da tela automaticamente, utilizei a função m_viewportSize.x e m_viewportSize.y para adquirir o tamanho, em pixels, da tela. 
+Diferente do sierpinski, ao invés de utilizar pontos calculados para a formação de um padrão geometrico.
+No onPaintUI(), adicionei dois "Sliders" um na horizontal e um na vertical (SliderFloat e VSliderFloat, respectivamente).
+Ambos os sliders são ajustados ao tamanho da tela automaticamente, utilizei a função 
+m_viewportSize.x e m_viewportSize.y para adquirir o tamanho, em pixels, da tela. 
 com o SetNextWindowPos e SetNextWindowSize, posicionei todas as janelas na posição e tamanho de acordo com as necessidades.
 
     // Window - Mexer na horizontal
@@ -33,7 +40,9 @@ com o SetNextWindowPos e SetNextWindowSize, posicionei todas as janelas na posi�
       ImGui::PopStyleVar();
     ImGui::End();
 
-Com estes atributos prontos, fiz a alteração no onPaint(), para mexer os pontos que estavam sendo criados. Adicionando a linha "m_P = glm::vec2((horizontalValue*2.0f)-1.0f,(verticalValue*2.0f)-1.0f);" O programa ja estava realizando a tarefa de pintar/desenhar na horizontal e na vertical.
+Com estes atributos prontos, fiz a alteração no onPaint(), para mexer os pontos que estavam sendo criados. 
+Adicionando a linha "m_P = glm::vec2((horizontalValue*2.0f)-1.0f,(verticalValue*2.0f)-1.0f);" 
+O programa ja estava realizando a tarefa de pintar/desenhar na horizontal e na vertical.
 
 Além de pintar o programa também faz circulos. e para isso temos alguma opções durante a execução do programa:
 1) botão de desenhar os circulos
